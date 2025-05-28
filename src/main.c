@@ -47,5 +47,9 @@ int main(int argc, char **argv) {
     /* tenth_pixel() function is defined in feature.h and implemented in feature.c */
     tenth_pixel( configuration.filenames[0] );
   }
+    if ( strncmp( configuration.command, "print_pixel", 11 ) == 0 ) {
+    /* print_pixel() function is defined in utils.h and implemented in utils.c */
+    print_pixel( configuration.filenames[0], atoi(argv[5]), atoi(argv[6]) );
+  }
   return 0;
 }
