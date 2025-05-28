@@ -12,8 +12,12 @@ typedef struct _pixelRGB {
   /*
    * TO COMPLETE
    */
-   char R ; 
+   unsigned char R ;
+   unsigned char G ;
+   unsigned char B ; 
 } pixelRGB ;
 
+pixelRGB * get_pixel( char *source_path, const unsigned int x, const unsigned int y );
+void print_pixel( char *filename, int x, int y );
 
 #endif
