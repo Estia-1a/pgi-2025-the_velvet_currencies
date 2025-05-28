@@ -30,6 +30,6 @@ pixelRGB * get_pixel(char *source_path, const unsigned int x, const unsigned int
 void print_pixel( char *filename, int x, int y ) {
     pixelRGB * pixel = get_pixel(filename, (const unsigned int) x, (const unsigned int) y) ;    
 
-    printf("first_pixel %d %d %d",pixel[0],pixel[1],pixel[2]);
+    printf("print_pixel (%d, %d) %u %u %u", x, y, pixel -> R,pixel -> G ,pixel -> B);
 
 }
