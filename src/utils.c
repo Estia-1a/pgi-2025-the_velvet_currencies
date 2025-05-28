@@ -31,5 +31,4 @@ void print_pixel( char *filename, int x, int y ) {
     pixelRGB * pixel = get_pixel(filename, (const unsigned int) x, (const unsigned int) y) ;    
 
     printf("print_pixel (%d, %d) %u %u %u", x, y, pixel -> R,pixel -> G ,pixel -> B);
-
 }
