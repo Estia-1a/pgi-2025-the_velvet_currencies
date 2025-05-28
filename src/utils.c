@@ -24,7 +24,7 @@ pixelRGB * get_pixel(char *source_path, const unsigned int x, const unsigned int
         return NULL ;
     }
 
-    return (pixelRGB *) &data[(y*width + x)*channel_count ] ;
+    return (pixelRGB *) &data[(y*width + x)*channel_count] ;
 }
 
 void print_pixel( char *filename, int x, int y ) {
