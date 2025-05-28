@@ -7,3 +7,6 @@
  * 
  */
 
+pixelRGB * get_pixel(char*source_path, const unsigned int x, const unsigned int y){
+    
+}
