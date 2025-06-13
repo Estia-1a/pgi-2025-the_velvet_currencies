@@ -11,7 +11,7 @@ void min_component(char *image) {
 void max_pixel(char *image_path) {
     int x,y;
     int l,L,c;
-    read_image_data(image_path, %l, %L, %c);
+    read_image_data(image_path, &l, &L, &c);
 
     int somme;
     int i;
@@ -34,7 +34,7 @@ void max_pixel(char *image_path) {
         }
     }
 
-    x = max_index;
-    y = max_index;
+    x = max_i;
+    y = max_i;
     printf("max_pixel(%d, %d): %d, %d, %d\n",x,y,data[id],data[id+1],data[id+2]);
 }
