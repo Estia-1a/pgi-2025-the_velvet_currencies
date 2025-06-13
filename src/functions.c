@@ -36,5 +36,5 @@ void max_pixel(char *image_path) {
 
     x = max_i;
     y = max_i;
-    printf("max_pixel(%d, %d): %d, %d, %d\n",x,y,data[id],data[id+1],data[id+2]);
+    printf("max_pixel(%d, %d): %d, %d, %d\n",x,y,data[max_i],data[max_i+1],data[max_i+2]);
 }
