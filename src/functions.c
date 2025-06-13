@@ -21,7 +21,7 @@ void max_pixel(char *image_path) {
     unsigned char *data;
     int x,y;
     int l,L,c;
-   
+    read_image_data(image_path,&data,&l,&L,&c);
     int somme;
     int i;
     int r, g, b;
