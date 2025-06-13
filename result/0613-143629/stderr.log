@@ -1,0 +1,28 @@
+/home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/features.c: In function ‘max_component’:
+/home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/features.c:54:9: error: conflicting types for ‘data’; have ‘int’
+   54 |     int data;
+      |         ^~~~
+/home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/features.c:47:20: note: previous declaration of ‘data’ with type ‘unsigned char *’
+   47 |     unsigned char *data;
+      |                    ^~~~
+/home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/features.c:60:13: warning: comparison between pointer and integer
+   60 |     if (RGB == 'R'){
+      |             ^~
+/home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/features.c:62:18: warning: comparison between pointer and integer
+   62 |     else if (RGB == 'G'){
+      |                  ^~
+/home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/features.c:64:18: warning: comparison between pointer and integer
+   64 |     else if (RGB == 'B'){
+      |                  ^~
+/home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/features.c:75:28: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+   75 |     printf("max_component %c (%d, %d): %d\n", RGB, x_max, y_max, max);
+      |                           ~^                  ~~~
+      |                            |                  |
+      |                            int                char *
+      |                           %s
+gmake[2]: *** [CMakeFiles/freud.dir/build.make:93: CMakeFiles/freud.dir/src/features.c.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:87: CMakeFiles/freud.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2
+
+The process '/usr/local/bin/cmake' failed with exit code 2
