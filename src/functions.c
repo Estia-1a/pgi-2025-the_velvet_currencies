@@ -7,3 +7,8 @@
 void min_component(char *image) {
     
 }
+
+void max_pixel(char*image){
+    int s
+
+}
