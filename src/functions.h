@@ -4,7 +4,7 @@
             /* min pixel*/
             /* max pixel*/
             /* max component*/
-void min_component(char *image);            /* min component*/
+void min_component(char *image);         /* min component*/
 
 
 #endif
