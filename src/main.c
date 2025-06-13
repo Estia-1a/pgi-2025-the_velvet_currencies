@@ -51,6 +51,10 @@ int main(int argc, char **argv) {
     /* print_pixel() function is defined in utils.h and implemented in utils.c */
     print_pixel( configuration.filenames[0], atoi(argv[5]), atoi(argv[6]) );
   }
+  if ( strncmp( configuration.command, "max_pixel", 9 ) == 0 ) {
+    /* print_pixel() function is defined in utils.h and implemented in utils.c */
+    max_pixel( configuration.filenames[0] );
+  }
   if ( strncmp( configuration.command, "max_component", 13 ) == 0 ) {
     /* max_component() function is defined in feature.h and implemented in feature.c */
     max_component( configuration.filenames[0],argv[5] );

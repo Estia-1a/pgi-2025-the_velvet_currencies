@@ -42,8 +42,8 @@ void tenth_pixel(char *source_path) {
     int n;
     read_image_data(source_path, &data, &w, &h, &n);
     printf("tenth_pixel: %d,%d,%d\n",data[29],data[30],data[31]);
-}
 
+}
 void max_component(char *image, char *RGB) {
     unsigned char *data;
     int x=0;
