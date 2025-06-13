@@ -37,24 +37,24 @@
 
 
 /* min component*/
-void min_component(char *source_path, char color){
+void min_component(char *source_path, char *color){
     unsigned char *data;
     int w;
     int h;
     int n;
     read_image_data(source_path, &data, &w, &h, &n);
     int x,y ;
-    int j, min = 255;
+    int j=0, min = 255;
     int min_x = 0;
     int min_y = 0;
 
-    if (color == 'R') {
+    if (strcmp( color, "R")==0) {
         j = 0 ;
     }
-    if (color == 'G') {
+    if (strcmp( color, "G")==0) {
         j = 1 ;
     }
-    if (color == 'B') {
+    if (strcmp( color, "B")==0) {
         j = 2 ; 
     }
     for (y=0 ; y<h ; y++) {
@@ -66,5 +66,5 @@ void min_component(char *source_path, char color){
             }
         }
     }
-    printf("min_component %d : (%d,%d)", color, min_x, min_y);
+    printf("min_component %s : (%d,%d)", color, min_x, min_y);
 }
