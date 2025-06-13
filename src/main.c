@@ -51,18 +51,18 @@ int main(int argc, char **argv) {
     /* print_pixel() function is defined in utils.h and implemented in utils.c */
     print_pixel( configuration.filenames[0], atoi(argv[5]), atoi(argv[6]) );
   }
-    if ( strncmp( configuration.command, "max_pixel", 9 ) == 0 ) {
+  /*  if ( strncmp( configuration.command, "max_pixel", 9 ) == 0 ) {*/
     /* max_pixel() function is defined in fonction.h and implemented in fonction.c */
-    max_pixel( configuration.filenames[0], atoi(argv[5]), atoi(argv[6]) );
-  }
-    if ( strncmp( configuration.command, "min_pixel", 9 ) == 0 ) {
+   /*  max_pixel( configuration.filenames[0] );
+  }*/
+   /*  if ( strncmp( configuration.command, "min_pixel", 9 ) == 0 ) {*/
     /* min_pixel() function is defined in utils.h and implemented in utils.c */
-    min_pixel( configuration.filenames[0], atoi(argv[5]), atoi(argv[6]) );
-  }
-    if ( strncmp( configuration.command, "max_component", 13 ) == 0 ) {
+   /*  min_pixel( configuration.filenames[0] );
+  }*/
+   /*  if ( strncmp( configuration.command, "max_component", 13 ) == 0 ) {*/
     /* print_pixel() function is defined in fonction.h and implemented in fonction.c */
-    max_component( configuration.filenames[0], argv[5]);
-  }
+   /*  max_component( configuration.filenames[0], argv[5]);
+  } */
     if ( strncmp( configuration.command, "min_component", 13 ) == 0 ) {
     /* min_component() function is defined in fonction.h and implemented in fonction.c */
     min_component( configuration.filenames[0], argv[5]);

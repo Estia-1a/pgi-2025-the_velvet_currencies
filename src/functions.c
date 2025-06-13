@@ -45,24 +45,26 @@ void min_component(char *source_path, char color){
     read_image_data(source_path, &data, &w, &h, &n);
     int x,y ;
     int j, min = 255;
-    int min_pix = (0,0);
+    int min_x = 0;
+    int min_y = 0;
 
     if (color == 'R') {
-        j = 0
+        j = 0 ;
     }
     if (color == 'G') {
-        j = 1
+        j = 1 ;
     }
     if (color == 'B') {
-        j = 2
+        j = 2 ; 
     }
     for (y=0 ; y<h ; y++) {
         for (x=0 ; x<w ; x++) {
             if (data[(y*w+x)*n+j] < min) {
                 min = data[(y*w+x)*n+j];
-                min_pix(x,y);
+                min_x = x;
+                min_y = y;
             }
         }
     }
-    return printf("min_component %d : (%d,%d)", color, min_pix);
+    printf("min_component %d : (%d,%d)", color, min_x, min_y);
 }
