@@ -4,6 +4,7 @@
 #include "features.h"
 #include "utils.h"
 #include <stddef.h>
+#include <string.h>
 
 /**
  * @brief Here, you have to code features of the project.
