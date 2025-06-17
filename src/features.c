@@ -148,3 +148,29 @@ void rotate_cw(char *image) {
     write_image_data("./images/output/image_out.bmp", rotated, new_w, new_h);
     free(rotated);
 }
+
+void rotate_acw(char *image) {
+    unsigned char *data;
+    int w;
+    int h;
+    int n;
+    int x;
+    int y;
+    read_image_data(image, &data, &w, &h, &n);
+    int new_w=h;
+    int new_h=w;
+    unsigned char *rotated=malloc(new_w*new_h*n);
+    for (y=0; y<h; y++){
+        for (x=0; x<w; x++){
+            int old_index=(y*w+x)*n;
+            int new_x=y;
+            int new_y=h-1-x;
+            int new_index=(new_y*new_w+new_x)*n;
+            rotated[new_index]=data[old_index];
+            rotated[new_index+1]=data[old_index+1];
+            rotated[new_index+2]=data[old_index+2];
+        }
+    }
+    write_image_data("./images/output/image_out.bmp", rotated, new_w, new_h);
+    free(rotated);
+}

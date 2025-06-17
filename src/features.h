@@ -12,4 +12,5 @@ void color_red(char *image);
 void color_green(char *image);
 void color_blue(char *image);
 void rotate_cw(char *image);
+void rotate_acw(char *image);
 #endif
