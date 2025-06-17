@@ -108,6 +108,7 @@ void invert_color(char*image_path){
 
     int i;
     int lol;
+    
     int r, g, b;
     int r1, g1, b1;
 
@@ -121,6 +122,6 @@ void invert_color(char*image_path){
         data_nouveau[lol +1] = g1;
         data_nouveau[lol +2] = b1;
     }
-    write_image_data(image_path, data_nouveau, l, L, c);
-    printf("invert_color(%s)\n", image_path);
+    write_image_data("image_out.bmp", data_nouveau, l, L, c);
+
 }
