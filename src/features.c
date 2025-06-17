@@ -90,3 +90,35 @@ void color_red(char *image) {
     
     write_image_data("./images/output/image_out.bmp", data, w, h);
 }
+
+void color_green(char *image) {
+    unsigned char *data;
+    int w;
+    int h;
+    int n;
+    int i=0;
+    read_image_data(image, &data, &w, &h, &n);
+    for (i=0; i<w*h; i++){
+        data[i*n+0]=0;
+        data[i*n+2]=0;
+    }
+
+    
+    write_image_data("./images/output/image_out.bmp", data, w, h);
+}
+
+void color_blue(char *image) {
+    unsigned char *data;
+    int w;
+    int h;
+    int n;
+    int i=0;
+    read_image_data(image, &data, &w, &h, &n);
+    for (i=0; i<w*h; i++){
+        data[i*n+0]=0;
+        data[i*n+1]=0;
+    }
+
+    
+    write_image_data("./images/output/image_out.bmp", data, w, h);
+}

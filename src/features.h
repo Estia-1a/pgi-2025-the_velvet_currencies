@@ -9,4 +9,6 @@ void dimension(char *source_path);
 void tenth_pixel(char *source_path);
 void max_component(char *image, char *RGB);
 void color_red(char *image);
+void color_green(char *image);
+void color_blue(char *image);
 #endif
