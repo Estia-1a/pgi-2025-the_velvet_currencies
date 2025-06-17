@@ -101,8 +101,6 @@ void min_component(char *source_path, char *color){
 
 void invert_color(char*image_path){
     unsigned char *data;
-    unsigned char *data_nouveau = "";
-
     int l,L,c;
     read_image_data(image_path,&data,&l,&L,&c);
 
@@ -110,18 +108,13 @@ void invert_color(char*image_path){
     int lol;
     
     int r, g, b;
-    int r1, g1, b1;
-
-
+    
     for (i=0; i<l*L;i++){
         lol = i*c;
-        r1 = 255- data[lol];
-        g1 = 255 - data[lol +1];
-        b1 = 255 - data[lol +2];
-        data_nouveau[lol] = r1;
-        data_nouveau[lol +1] = g1;
-        data_nouveau[lol +2] = b1;
+        data[lol]= 255- data[lol];
+        data[lol]= 255 - data[lol +1];
+        data[lol] = 255 - data[lol +2];
     }
-    write_image_data("image_out.bmp", data_nouveau, l, L, c);
+    write_image_data("image_out.bmp", &data, &l, &L,&c);
 
 }
