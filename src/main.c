@@ -67,5 +67,10 @@ int main(int argc, char **argv) {
     /* min_component() function is defined in fonction.h and implemented in fonction.c */
     min_component( configuration.filenames[0], argv[5]);
   }
+  if ( strncmp( configuration.command, "color_invert", 12 ) == 0 ) {
+    /* print_pixel() function is defined in utils.h and implemented in utils.c */
+    color_invert( configuration.filenames[0] );
+  }
+  
   return 0;
 }
