@@ -98,3 +98,24 @@ void min_component(char *source_path, char *color){
     }
     printf("min_component %s : (%d,%d)", color, min_x, min_y);
 }
+
+void invert_color(char*image){
+    unsigned char *data;
+    unsigned char *data_nouveau = "";
+
+    int l,L,c;
+    read_image_data(image_path,&data,&l,&L,&c);
+
+    int i;
+    int r, g, b;
+    int r1, g1, b1;
+
+
+    for (i=0; i<l*L;i++){
+        lol = i*c;
+        r1 = 255- data[lol];
+        g1 = 255 - data[lol +1];
+        b1 = 255 - data[lol +2];
+
+    
+    }
