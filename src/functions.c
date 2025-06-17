@@ -99,7 +99,7 @@ void min_component(char *source_path, char *color){
     printf("min_component %s : (%d,%d)", color, min_x, min_y);
 }
 
-void invert_color(char*image){
+void invert_color(char*image_path){
     unsigned char *data;
     unsigned char *data_nouveau = "";
 
@@ -116,6 +116,10 @@ void invert_color(char*image){
         r1 = 255- data[lol];
         g1 = 255 - data[lol +1];
         b1 = 255 - data[lol +2];
-
-    
+        data_nouveau[lol] = r1;
+        data_nouveau[lol +1] = g1;
+        data_nouveau[lol +2] = b1;
     }
+    write_image_data(image_path, data_nouveau, l, L, c);
+    printf("invert_color(%s)\n", image_path);
+}
