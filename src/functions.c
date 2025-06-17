@@ -107,6 +107,7 @@ void invert_color(char*image_path){
     read_image_data(image_path,&data,&l,&L,&c);
 
     int i;
+    int lol;
     int r, g, b;
     int r1, g1, b1;
 
