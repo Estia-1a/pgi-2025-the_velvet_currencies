@@ -75,4 +75,23 @@ void max_component(char *image, char *RGB) {
     printf("max_component %s (%d, %d): %d\n", RGB, x_max, y_max, max);
 }
 
-void color_in_red()
+void color_in_red(char *image) {
+    unsigned char *data;
+    int w;
+    int h;
+    int n;
+    int i=0;
+    read_image_data(image, &data, &w, &h, &n);
+    for (i=0; i<w*h; i++){
+        data[i*n+1]=0;
+        data[i*n+2]=0;
+    }
+    int len = strlen(*image);
+    image[len-5] = '2';
+    image[len + 1]
+
+    return(write_image_data(output_image_, data, w, h);)
+
+
+
+}
