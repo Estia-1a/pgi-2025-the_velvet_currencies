@@ -1,0 +1,24 @@
+/home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/features.c:48:6: error: conflicting types for ‘max_component’; have ‘void(char *, char *)’
+   48 | void max_component(char *image, char *RGB) {
+      |      ^~~~~~~~~~~~~
+/home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/main.c: In function ‘main’:
+/home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/main.c:52:5: error: too many arguments to function ‘max_component’
+   52 |     max_component( configuration.filenames[0],argv[5] );
+      |     ^~~~~~~~~~~~~
+In file included from /home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/main.c:8:
+/home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/features.h:10:6: note: declared here
+   10 | void max_component(char *image);
+      |      ^~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/freud.dir/build.make:107: CMakeFiles/freud.dir/src/main.c.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+In file included from /home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/features.c:4:
+/home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/features.h:10:6: note: previous declaration of ‘max_component’ with type ‘void(char *)’
+   10 | void max_component(char *image);
+      |      ^~~~~~~~~~~~~
+/home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/features.c: In function ‘color_in_red’:
+/home/runner/work/pgi-2025-the_velvet_currencies/pgi-2025-the_velvet_currencies/src/features.c:79: error: expected ‘{’ at end of input
+gmake[2]: *** [CMakeFiles/freud.dir/build.make:93: CMakeFiles/freud.dir/src/features.c.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:87: CMakeFiles/freud.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2
+
+The process '/usr/local/bin/cmake' failed with exit code 2
