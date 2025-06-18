@@ -88,15 +88,18 @@ int main(int argc, char **argv) {
     /* print_pixel() function is defined in utils.h and implemented in utils.c */
     color_invert( configuration.filenames[0] );
   }
-    if ( strncmp( configuration.command, "rotate_cw", 9 ) == 0 ) {
+  if ( strncmp( configuration.command, "color_gray_luminance", 20 ) == 0 ) {
     /* print_pixel() function is defined in utils.h and implemented in utils.c */
-    rotate_cw( configuration.filenames[0] );
+    color_gray_luminance( configuration.filenames[0] );
   }
-    if ( strncmp( configuration.command, "rotate_acw", 10 ) == 0 ) {
+  if ( strncmp( configuration.command, "color_gray", 10 ) == 0 ) {
     /* print_pixel() function is defined in utils.h and implemented in utils.c */
-    rotate_acw( configuration.filenames[0] );
+    color_gray( configuration.filenames[0] );
   }
-  
+  if ( strncmp( configuration.command, "mirror_horizontal", 17 ) == 0 ) {
+    /* print_pixel() function is defined in utils.h and implemented in utils.c */
+    mirror_horizontal( configuration.filenames[0] );
+  }
   return 0;
 }
 

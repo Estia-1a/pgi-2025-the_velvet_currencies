@@ -117,29 +117,49 @@ void color_invert(char*image_path){
     write_image_data("./images/input/image_out.bmp", data, l, L);
 }
 
-void rotate_cw(char*image_path){
+void color_gray(char*image_path){
     unsigned char *data;
-    int l,L,c;
-    read_image_data(image_path,&data,&l,&L,&c);
+    int l;
+    int L;
+    int c;
+    int i;
+    int id;
+    int moy = 0;
+    read_image_data(image_path, &data, &l, &L, &c);
+    unsigned char*data1 = malloc(l*L*c);
 
-    unsigned char *data_rotation = malloc(l * L * c);
-
-    int i,id,x,y,yd,xd;
-    for (y=0; y < L; y++) {
-        for (x=0; x < l; x++) {
-            i = (y * L + x) * c;
-            xd = L - 1 - y;
-            yd = x;
-            id = (yd * L + xd) * c;
-            data_rotation[id] = data[i];
-            data_rotation[id + 1] = data[i + 1];
-            data_rotation[id + 2] = data[i + 2];
-        }
-   }
-    write_image_data("./images/input/image_out.bmp", data_rotation, l, L);
+    for (i=0; i<l*L; i++){
+        id = i*c;
+        moy = (data[id]+data[id+1]+data[id+2])/3;
+        data1[id + 0]= moy;
+        data1[id + 1] = moy;
+        data1[id + 2]= moy;
+    }    
+    write_image_data("./images/input/image_out.bmp", data1, l, L);
 }
 
-void rotate_acw(char*image_path){
+void color_gray_luminance(char*image_path){
+    unsigned char *data;
+    int l;
+    int L;
+    int c;
+    int i;
+    int id;
+    int moy = 0;
+    read_image_data(image_path, &data, &l, &L, &c);
+    unsigned char*data1 = malloc(l*L*c);
+
+    for (i=0; i<l*L; i++){
+        id = i*c;
+        moy = (0.21*data[id]+0.72*data[id+1]+0.07*data[id+2])/3;
+        data1[id + 0]= moy;
+        data1[id + 1] = moy;
+        data1[id + 2]= moy;
+    }    
+    write_image_data("./images/input/image_out.bmp", data1, l, L);
+}
+
+void mirror_horizontal(char*image_path){
     unsigned char *data;
     int l,L,c;
     read_image_data(image_path,&data,&l,&L,&c);
@@ -149,13 +169,13 @@ void rotate_acw(char*image_path){
     int i,id,x,y,yd,xd;
     for (y=0; y < L; y++) {
         for (x=0; x < l; x++) {
-            i = (y * L + x) * c;
-            yd = L - 1 - x;
-            xd = y;
-            id = (yd * L + xd) * c;
-            data_rotation[id] = data[i];
+            i = (y * l + x) * c;
+            xd = l - 1 - x;
+            yd = y;
+            id = (yd * l + xd) * c;
+            data_rotation[id + 2] = data[i +2];
             data_rotation[id + 1] = data[i + 1];
-            data_rotation[id + 2] = data[i + 2];
+            data_rotation[id] = data[i ];
         }
    }
     write_image_data("./images/input/image_out.bmp", data_rotation, l, L);
