@@ -8,4 +8,5 @@ void color_gray_luminance(char*image_path);
 void color_gray(char*image_path);
 void mirror_horizontal(char*image_path);
 void mirror_vertical(char*image_path);
+void mirror_total(char*image_path);
 #endif
