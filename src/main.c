@@ -88,6 +88,10 @@ int main(int argc, char **argv) {
     /* print_pixel() function is defined in utils.h and implemented in utils.c */
     color_invert( configuration.filenames[0] );
   }
+    if ( strncmp( configuration.command, "rotate_cw", 9 ) == 0 ) {
+    /* print_pixel() function is defined in utils.h and implemented in utils.c */
+    rotate_cw( configuration.filenames[0] );
+  }
   
   return 0;
 }

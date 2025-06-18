@@ -100,7 +100,7 @@ void min_component(char *source_path, char *color){
     printf("min_component %s : (%d,%d)", color, min_x, min_y);
 }
 
-void color_invert(const char*image_path){
+void color_invert(char*image_path){
     unsigned char *data;
     int l,L,c;
     read_image_data(image_path,&data,&l,&L,&c);
@@ -115,4 +115,26 @@ void color_invert(const char*image_path){
         }
    }
     write_image_data("./images/input/image_out.bmp", data, l, L);
+}
+
+void rotate_cw(char*image_path){
+    unsigned char *data;
+    int l,L,c;
+    read_image_data(image_path,&data,&l,&L,&c);
+    
+    unsigned char *data_rotation = malloc(l * L * c);
+
+    int i,id,x,y,yd,xd;
+    for (y=0; y < L; y++) {
+        for (x=0; x < l; x++) {
+            i = (y * L + x) * c;
+            xd = L - 1 - y;
+            yd = x;
+            id = (yd * L + xd) * c;
+            data_rotation[id] = data[i];
+            data_rotation[id + 1] = data[i + 1];
+            data_rotation[id + 2] = data[i + 2];
+        }
+   }
+    write_image_data("./images/input/image_out.bmp", data_rotation, l, L);
 }
