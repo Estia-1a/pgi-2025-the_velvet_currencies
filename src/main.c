@@ -100,6 +100,10 @@ int main(int argc, char **argv) {
     /* print_pixel() function is defined in utils.h and implemented in utils.c */
     mirror_horizontal( configuration.filenames[0] );
   }
+  if ( strncmp( configuration.command, "mirror_vertical", 15 ) == 0 ) {
+    /* print_pixel() function is defined in utils.h and implemented in utils.c */
+    mirror_vertical( configuration.filenames[0] );
+  }
   return 0;
 }
 

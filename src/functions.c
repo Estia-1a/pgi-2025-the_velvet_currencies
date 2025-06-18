@@ -180,3 +180,25 @@ void mirror_horizontal(char*image_path){
    }
     write_image_data("./images/input/image_out.bmp", data_rotation, l, L);
 }
+
+void mirror_vertical(char*image_path){
+    unsigned char *data;
+    int l,L,c;
+    read_image_data(image_path,&data,&l,&L,&c);
+    
+    unsigned char *data_rotation = malloc(l * L * c);
+
+    int i,id,x,y,yd,xd;
+    for (y=0; y < L; y++) {
+        for (x=0; x < l; x++) {
+            i = (y * l + x) * c;
+            xd = x;
+            yd = L - 1 - y;
+            id = (yd * l + xd) * c;
+            data_rotation[id + 2] = data[i +2];
+            data_rotation[id + 1] = data[i + 1];
+            data_rotation[id] = data[i ];
+        }
+   }
+    write_image_data("./images/input/image_out.bmp", data_rotation, l, L);
+}
