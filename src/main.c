@@ -71,7 +71,10 @@ int main(int argc, char **argv) {
     /* min_component() function is defined in fonction.h and implemented in fonction.c */
     min_component( configuration.filenames[0], argv[5]);
   }
-
+  if ( strncmp( configuration.command, "stat_report", 11 ) == 0 ) {
+    /* stat_report() function is defined in fonction.h and implemented in fonction.c */
+    stat_report( configuration.filenames[0]);
+  }
   if ( strncmp( configuration.command, "color_red", 9 ) == 0 ) {
     /* color_red() function is defined in feature.h and implemented in feature.c */
     color_red( configuration.filenames[0] );

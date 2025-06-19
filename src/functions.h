@@ -3,6 +3,7 @@
 
 void max_pixel(char *image_path);
 void min_component(char *image, char *color);
+void stat_report(char * image_path);
 void color_invert(char *image_path);
 void color_gray_luminance(char*image_path);
 void color_gray(char*image_path);

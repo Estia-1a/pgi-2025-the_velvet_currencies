@@ -100,6 +100,25 @@ void min_component(char *source_path, char *color){
     printf("min_component %s : (%d,%d)", color, min_x, min_y);
 }
 
+
+void stat_report(char * image_path) {
+    FILE * report;
+    report = fopen ("./report.txt", "w");
+    if (report == NULL) {
+        perror("Failed_to_open_report.txt_in_write_mode");
+        exit(-1);
+    }
+    /*fprintf(report, "%d\n\n", max_pixel(image_path));
+    fprintf(report, "%d\n\n", min_pixel(image_path));
+    fprintf(report, "%d\n\n", max_component(image_path, "R"));
+    fprintf(report, "%d\n\n", max_component(image_path, "G"));
+    fprintf(report, "%d\n\n", max_component(image_path, "B"));
+    fprintf(report, "%d\n\n", min_component(image_path, "R"));
+    fprintf(report, "%d\n\n", min_component(image_path, "G"));
+    fprintf(report, "%d\n\n", min_component(image_path, "B"));*/
+    fclose(report);
+}
+
 void color_invert(char*image_path){
     unsigned char *data;
     int l,L,c;
