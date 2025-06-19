@@ -247,16 +247,16 @@ void scale_crop(char *image_path, int xc, int yc, int lc, int Lc) {
 
     unsigned char *data_crop = malloc(lc * Lc * c);
 
-    int x_debut = xc - lc / 2;
-    int y_debut = yc - Lc / 2;
+    int x_debut = xc - lc/2;
+    int y_debut = yc - Lc/2 ;
     int id, i_crop;
 
     int xd,yd;
     int x_crop, y_crop;
     for (y_crop = 0; y_crop < Lc; y_crop++) {
         for (x_crop = 0; x_crop < lc; x_crop++) {
-            int xd = x_debut + x_crop;
-            int yd = y_debut + y_crop;
+            xd = x_debut + x_crop;
+            yd = y_debut + y_crop;
 
             if (xd >= 0 && xd < l && yd >= 0 && yd < L) {
                 id = (yd * l + xd) * c;
