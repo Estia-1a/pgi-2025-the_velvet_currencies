@@ -108,6 +108,10 @@ int main(int argc, char **argv) {
     /* print_pixel() function is defined in utils.h and implemented in utils.c */
     mirror_total( configuration.filenames[0] );
   }
+  if ( strncmp(configuration.command, "scale_crop", 10) == 0 ) {
+  /*print_pixel() function is defined in utils.h and implemented in utils.c */
+  scale_crop(configuration.filenames[0],atoi(argv[5]),atoi(argv[6]),atoi(argv[7]),atoi(argv[8]));
+  }
   return 0;
 }
 

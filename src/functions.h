@@ -9,4 +9,5 @@ void color_gray(char*image_path);
 void mirror_horizontal(char*image_path);
 void mirror_vertical(char*image_path);
 void mirror_total(char*image_path);
+void scale_crop(char *image_path, int xc, int yc, int lc, int Lc);
 #endif
