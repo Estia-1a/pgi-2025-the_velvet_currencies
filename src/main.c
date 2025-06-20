@@ -112,6 +112,10 @@ int main(int argc, char **argv) {
   /*print_pixel() function is defined in utils.h and implemented in utils.c */
   scale_crop(configuration.filenames[0],atoi(argv[5]),atoi(argv[6]),atoi(argv[7]),atoi(argv[8]));
   }
+   if ( strncmp( configuration.command, "color_desaturate", 16 ) == 0 ) {
+    /* color_desaturate() function is defined in feature.h and implemented in feature.c */
+    color_desaturate( configuration.filenames[0] );
+  }
   return 0;
 }
 
