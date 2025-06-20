@@ -1,0 +1,12 @@
+/usr/bin/ld: CMakeFiles/freud.dir/src/main.c.o: in function `main':
+main.c:(.text.startup+0x40c): undefined reference to `color_blue'
+/usr/bin/ld: main.c:(.text.startup+0x429): undefined reference to `color_green'
+/usr/bin/ld: main.c:(.text.startup+0x443): undefined reference to `color_red'
+/usr/bin/ld: main.c:(.text.startup+0x50b): undefined reference to `min_pixel'
+/usr/bin/ld: main.c:(.text.startup+0x528): undefined reference to `second_line'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/freud.dir/build.make:167: freud] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:87: CMakeFiles/freud.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2
+
+The process '/usr/local/bin/cmake' failed with exit code 2
