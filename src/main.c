@@ -49,7 +49,7 @@ int main(int argc, char **argv) {
   }
   if ( strncmp( configuration.command, "second_line", 11 ) == 0 ) {
     /* second_line() function is defined in feature.h and implemented in feature.c */
-    second_line( configuration.filenames[0] );
+  //  second_line( configuration.filenames[0] );
   }
   if ( strncmp( configuration.command, "min_pixel", 9 ) == 0 ) {
     /* tenth_pixel() function is defined in feature.h and implemented in feature.c */
