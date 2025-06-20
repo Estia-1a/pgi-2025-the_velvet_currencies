@@ -171,7 +171,7 @@ void color_invert(char*image_path){
             data[i + 2] = 255 - data[i + 2];
         }
    }
-    write_image_data("./images/input/image_out.bmp", data, l, L);
+    write_image_data("./image_out.bmp", data, l, L);
 }
 
 void color_gray(char*image_path){
@@ -192,7 +192,7 @@ void color_gray(char*image_path){
         data1[id + 1] = moy;
         data1[id + 2]= moy;
     }    
-    write_image_data("./images/input/image_out.bmp", data1, l, L);
+    write_image_data("./image_out.bmp", data1, l, L);
 }
 
 void color_gray_luminance(char*image_path){
@@ -213,7 +213,7 @@ void color_gray_luminance(char*image_path){
         data1[id + 1] = moy;
         data1[id + 2]= moy;
     }    
-    write_image_data("./images/input/image_out.bmp", data1, l, L);
+    write_image_data("./image_out.bmp", data1, l, L);
 }
 
 void mirror_horizontal(char*image_path){
@@ -235,7 +235,7 @@ void mirror_horizontal(char*image_path){
             data_rotation[id] = data[i ];
         }
    }
-    write_image_data("./images/input/image_out.bmp", data_rotation, l, L);
+    write_image_data("/image_out.bmp", data_rotation, l, L);
 }
 
 void mirror_vertical(char*image_path){
@@ -257,7 +257,7 @@ void mirror_vertical(char*image_path){
             data_rotation[id] = data[i ];
         }
    }
-    write_image_data("./images/input/image_out.bmp", data_rotation, l, L);
+    write_image_data("./image_out.bmp", data_rotation, l, L);
 }
 
 void mirror_total(char*image_path){
@@ -294,7 +294,7 @@ void mirror_total(char*image_path){
             data_rotation2[id2] = data_rotation[i2 ];
         }
    }
-    write_image_data("./images/input/image_out.bmp", data_rotation2, l, L);
+    write_image_data("./image_out.bmp", data_rotation2, l, L);
 }
 
 void scale_crop(char *image_path, int xc, int yc, int lc, int Lc) {
@@ -326,7 +326,7 @@ void scale_crop(char *image_path, int xc, int yc, int lc, int Lc) {
         }
     }
 
-    write_image_data("./images/input/image_out.bmp", data_crop, lc, Lc);
+    write_image_data("./image_out.bmp", data_crop, lc, Lc);
 }
 void color_red(char *image) {
     unsigned char *data;
@@ -341,7 +341,7 @@ void color_red(char *image) {
     }
 
     
-    write_image_data("./images/output/image_out.bmp", data, w, h);
+    write_image_data("./image_out.bmp", data, w, h);
 }
 
 void color_green(char *image) {
@@ -357,7 +357,7 @@ void color_green(char *image) {
     }
 
     
-    write_image_data("./images/output/image_out.bmp", data, w, h);
+    write_image_data("./image_out.bmp", data, w, h);
 }
 
 void color_blue(char *image) {
@@ -373,7 +373,7 @@ void color_blue(char *image) {
     }
 
     
-    write_image_data("./images/output/image_out.bmp", data, w, h);
+    write_image_data("./image_out.bmp", data, w, h);
 }
 void min_pixel(char *image) {
     unsigned char *data;
