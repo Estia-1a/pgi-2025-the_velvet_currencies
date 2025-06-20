@@ -416,3 +416,38 @@ void min_pixel(char *image) {
 
     printf("min_pixel(%d,%d): %d,%d,%d\n",x,y,r,g,b);
 } 
+
+void color_desaturate(char*image_path){
+    unsigned char *data;
+    int w,h,n,r,g,b;
+    int i;
+    int id;
+    int valeur_min, valeur_max,new_val;
+    read_image_data(image_path,&data,&w,&h,&n);
+    unsigned char *data1=malloc(w*h*n);
+    for (i = 0;i<w*h;i++) {
+        id=i*n ;
+        r=data[id];
+        g=data[id+1];
+        b=data[id+2];
+        valeur_min=r;
+        if (g<valeur_min) {
+            valeur_min=g;
+        }
+        if (b<valeur_min) {
+            valeur_min=b;
+        }
+        valeur_max=r;
+        if (g>valeur_max) {
+            valeur_max=g;
+        }
+        if (b>valeur_max) {
+            valeur_max=b;
+        }
+        new_val=(valeur_max+valeur_min)/2;
+        data1[id+0] =new_val;
+        data1[id+1]=new_val;
+        data1[id+2]=new_val;
+    }
+    write_image_data("./images/input/image_out.bmp", data1,w, h);
+}

@@ -25,4 +25,5 @@ void mirror_vertical(char*image_path);
 void mirror_total(char*image_path);
 void scale_crop(char *image_path, int xc, int yc, int lc, int Lc);
 void stat_report(char *image_path);
+void color_desaturate(char*image_path);
 #endif
