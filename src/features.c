@@ -75,4 +75,4 @@ void max_component(char *image, char *RGB) {
     printf("max_component %s (%d, %d): %d\n", RGB, x_max, y_max, max);
 }
 
-void color_in_red()
+void color_in_red(){}
